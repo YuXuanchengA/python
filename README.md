@@ -4,7 +4,7 @@
 
 basic_practice
 -------
-高级编程（一）课堂练习+课后习题（week4之后的作业在basic_practice里面！！！）
+高级编程（一）课堂练习+课后习题（从week4开始作业存放在basic_practice里面！！！）
 
 class_notes
 -------

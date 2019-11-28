@@ -23,3 +23,4 @@
 | csv   | CSV 文件读写  | 
 | Beautifulsoup/bs4 | 解析，遍历，维护“标签树”代码的功能库    |
 | requests   | HTTP库，请求网站获取网页数据     |
+| pyquery    | 以jQuery的语法来操作解析 HTML 文档 |

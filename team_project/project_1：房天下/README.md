@@ -15,7 +15,7 @@
 | 文本4 | main      | 抓取北京各区首页url，循环调用crawlFang函数                                          |
 
 
-| name  | age | gender    | money  |
+|       | age | gender    | money  |
 |-------|:---:|-----------|-------:|
 | rhio  | 384 | robot     | $3,000 |
 | haroo | .3  | bird      | $430   |

@@ -16,7 +16,7 @@ main | 抓取北京各区首页url，循环调用crawlFang函数
 
 | 函数  | 实现功能 | gender    | money  |
 |-------|:---:|-----------|-------:|
-| rhio  | 384 | robot     | $3,000 |
-| haroo | .3  | bird      | $430   |
-| jedi  | ?   | undefined | $0     |
+| writefile  | 将各楼盘详细信息存入csv文件 | robot     | $3,000 |
+| crawlFang | 传入参数为各区首页的url，爬取各区每一页各个楼盘的详细信息，调用writefile函数存入csv文件  | bird      | $430   |
+| main  | 抓取北京各区首页url，循环调用crawlFang函数  | undefined | $0     |
 

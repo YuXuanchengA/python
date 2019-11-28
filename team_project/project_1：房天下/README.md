@@ -19,6 +19,4 @@ main | 抓取北京各区首页url，循环调用crawlFang函数
 | rhio  | 384 | robot     | $3,000 |
 | haroo | .3  | bird      | $430   |
 | jedi  | ?   | undefined | $0     |
-————————————————
-版权声明：本文为CSDN博主「aladdin_sun」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/sunbocong/article/details/81033915
+

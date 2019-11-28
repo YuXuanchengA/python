@@ -14,3 +14,11 @@ writefile | 将各楼盘详细信息存入csv文件
 crawlFang | 传入参数为各区首页的url，爬取各区每一页各个楼盘的详细信息，调用writefile函数存入csv文件
 main | 抓取北京各区首页url，循环调用crawlFang函数
 
+| name  | age | gender    | money  |
+|-------|:---:|-----------|-------:|
+| rhio  | 384 | robot     | $3,000 |
+| haroo | .3  | bird      | $430   |
+| jedi  | ?   | undefined | $0     |
+————————————————
+版权声明：本文为CSDN博主「aladdin_sun」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/sunbocong/article/details/81033915

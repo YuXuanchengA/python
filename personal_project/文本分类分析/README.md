@@ -1,38 +1,57 @@
+可可英语新闻文本分类
 
-项目介绍
-=================
+项目简介：对于可可英语网爬虫爬取结果的文章，进行文本分类。要求拿出60%的数据进行训练，40%的数据进行测试。  
 
-**项目名称：** 英文版mini Coh-Metrix
+数据训练和测试所使用的主要工具：  
 
-**项目功能：** 抽取给定文本特征：描述性特征（段落数、句子数、单词数、平均句长和平均单词音节长），词汇丰富度及文本可读性
+|  模块   | 说明  |
+|  ----  | ----  |
+| gensim  | 使用word2vec模型训练词向量 |
+| sklearn  | 机器学习方法，主要使用了贝叶斯分类方法 |  
 
-**所有者：** 余煊铖
+一些参考链接
+``` python
+https://blog.csdn.net/cindy407/article/details/93789415  
+https://blog.csdn.net/cindy407/article/details/93777413 
+https://blog.csdn.net/lilong117194/article/details/82849054  
+https://www.cnblogs.com/always-fight/p/10159547.html 
+https://www.jianshu.com/p/6ada34655862 
+```
 
-**代码说明：**  
+数据准备：
+http://www.kekenet.com/read/  
+经济
+http://www.kekenet.com/read/news/economy/  
+娱乐
+http://www.kekenet.com/read/news/entertainment/  
+校园
+http://www.kekenet.com/read/news/Economics/  
+科技
+http://www.kekenet.com/read/news/keji/
 
-+ 函数及功能
+爬取数据使用的是Scrapy框架  
+``` python
+scrapy.cfg：项目的配置文件
+mySpider/：项目的Python模块，将会从这里引用代码
+myspider/items.py：项目的目标文件
+myspider/piplines.py：项目的管道文件
+myspider/settingd.py：项目的设置文件
+myspider/spiders/：存储爬取代码目录
+```
 
-| 函数        |  功能   |
-|:--------    |:--------|
-| clearBlankLine & ContentFetch | 文本降噪：获取文本内容，去除文本空行 |
-| DESPC & DESSC & DESWC & ASL & ASW | 返回文本段落数、句子数、单词数、平均句长和平均单词音节长 |
-| LDTTRc & LDTTRa & LDMTLDa  | 返回文本实词ttr，全文ttr和MTLD词汇丰富度 |
-| RDFRE & RDFKGL    | 返回The Flesch Reading Ease和Flesch-Kincaid Grade Level |
+数据库使用的是mysql  
+在spider/spiders/piplines里面配置，默认配置是
+``` python
+HOSTNAME = 'localhost'
+PORT = ''
+DATABASE = 'nlp'
+USER = 'root'
+PASSWORD = ''
+```
 
-+ 用到的库
-
-| 库        | 主要功能   | 具体说明   |
-|:--------     |:--------|  :--------|
-| re   | 处理正则表达式  | re.strip("\n")用于去除文本空行，计算段落数 |
-| nltk    | 英文分词、分句及词性标注 | 无  |
-| textstat    | 文本可读性计算包 | 多种文本可读性计算算法  |
-
-+ 部分参考链接：  
-http://141.225.41.245/cohmetrixhome/documentation_indices.html  
-https://blog.csdn.net/weixin_38008864/article/details/102855031  
-https://blog.csdn.net/qq_36652619/article/details/77253208
-
-**存在的困难及问题：**  
-+ 计算平均单词音节数时尝试了三种办法：使用nltk的语料库cmudict，但循环算法电脑跑不动；使用Readability库，同样没有跑动；最后选择用textstat库
-+ Coh-Metrix官网上Readability只有三个指标，本项目实现了其中两种，其中RDL2（二语文本可读性）没有找到相关的计算公式和说明
-+ Cohmatrix-Webtool无法打开，输出结果格式不确定
+一些参考链接
+``` python
+SQLAlchemy: https://www.liaoxuefeng.com/wiki/897692888725344/955081460091040  
+Middlewares: https://blog.csdn.net/weixin_30764771/article/details/95004989  
+Settings: https://blog.csdn.net/weixin_30894389/article/details/95004944  
+```
